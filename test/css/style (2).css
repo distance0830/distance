@@ -1,0 +1,134 @@
+a{
+	text-decoration: none;
+	color: #f0ffff;
+	/* 文字颜色,注释还原 */
+	display:block;
+	width:88px;
+	/* 背景颜色宽度 */
+	font-weight:bold;
+}
+body{
+background-image: url("../images/sky5.jpg");
+/* 背景图片 */
+background-position: center center;
+background-size: cover;
+height: 100vh;
+/* 自适应屏幕 */
+/* position: relative;
+justify-content: center;
+align-items: center;
+水平垂直居中 */
+
+}
+
+h1 {
+	position:relative;
+	color: #e8e8e8;
+	font-size: 60px;
+	font-family: 'Courier New', Courier, monospace;
+	text-align: center;
+	font-weight: 600;
+	margin: 50px 0px;
+	letter-spacing: 2px;
+	top: 40px;
+	background-image: url(../images/h2.jpg);
+	-webkit-background-clip: text;
+}
+
+.li li{
+	/* “重置密码”属性 */
+	width: 92px;
+	float: right;
+	top:auto;
+	list-style: none;
+	/* 去除列表符号 */
+	font-size: 15px;
+		/* 文字大小 */
+	text-align: center;
+	border-radius: 5px;
+		/* 边角半径 */
+	
+}
+.li a{
+	margin-top: 6px;
+	margin-left: 2px;
+	/* 重置密码水平位置 */
+	text-align: center;
+}
+#title{
+	width: 125px;
+	font-weight: bold;
+	  粗字体
+	 margin-left:2cm;
+	  左外边距
+	  left: 2%;
+	  	font-size: 22px;
+	/* 文字大小 */
+		position: relative;
+		width:125px;
+		border-radius: 5px;
+		
+}
+.title1 a{
+	/* 你说的队
+  font-weight: bold;
+  /* 粗字体
+/*  margin-left:2cm;
+  左外边距 */
+  left: 4%;
+  	font-size: 22px;
+	/* 文字大小 */
+	position: relative;
+	width:125px;
+	border-radius: 5px;
+	
+
+}
+/* 二级导航 */
+.group{
+	display: none;
+	width: 80px;
+/* 	height: auto; */
+	position: absolute;
+	background-color: transparent;
+	list-style: none;
+	font-size: 20px;
+	text-align: center;
+	top: 7px;
+	left: 18px;
+	padding: 5px;
+	color:cadetblue;
+}
+.group>li{
+	/* group类下所有标签li的内边距 */
+	padding: 2px;
+	border-radius: 30px;
+}
+.group li:hover{
+	background-color: aqua;
+}
+#title:hover .group{
+	display: block;
+}
+ul{
+	position: relative;
+	top: -46px;
+	/* 注册,登录..重置距离顶部距离 */
+	right: 0%;
+}
+
+/* float,鼠标悬停渐变 */
+.li>li:hover,.float1:hover{
+/* A>B表示选择A元素的所有子B元素 ,选择仅class为.li下的li标签 */
+/* ,(逗号)分隔不同类, */
+background-color: aqua;
+}
+
+/* .float1{
+	border: #f0ffff;
+	width:130px;
+}
+.float1:hover{
+background-color: aqua;
+} */
+

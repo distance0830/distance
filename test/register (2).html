@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/register.css">
+		<title></title>
+	</head>
+	<style>
+		.canvaszz{
+			position:absolute;
+			background-image: url(../test/sky2.jpg);
+			background-size: 100%;
+			width:100%;
+			height:100%;
+			z-index:-2;
+			filter:alpha(opacity=20);
+		    opacity: 0.5;
+		}
+		.canvas {
+			position:absolute;
+			display:inline-block;
+			width:100%;
+			height:auto;
+			vertical-align:baseline;
+			z-index:-3;
+			opacity: 0.4;
+		}
+	</style>
+	<body   class="registerbody">
+		
+		<audio autoplay="autopaly" loop="loop" id="audios">
+		    <source src="music/hh_01.mp3">
+		</audio>
+		<script>
+		document.addEventListener('click', function() {
+		    document.getElementById('audios').play()
+		})
+		 
+		</script>
+		<div class="starbg"> </div>
+		<div class="registerpage">
+			<div class="return-logo" onclick="javascript:window.location.href='index.html'"></div>
+			<div class="register-input">
+				<form>
+					<input type="text" class="name" name="username" placeholder="用户名" required="">
+					<input type="password" class="password" name="password" placeholder="密码" required="">
+					<input type="password" class="password" name="confirm password" placeholder="确认密码" required="">
+					<input type="text" class="email" name="email" placeholder="邮箱" required="">
+					<input type="text" class="location" name="location" placeholder="您的位置" required="">
+					<input type="submit" class="submit" onclick="load()" value="注册">
+				</form>
+			</div>
+			<div class="register-bg"></div>
+		</div>
+	</body>
+	<script>
+		function load(){
+			alert("页面正在制作中···")
+		}
+	</script>
+
+</html>
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/login.css">
+		<link rel="stylesheet" href="css/cude.css">
+	</head>
+	<body>
+		<audio autoplay="autopaly" loop="loop" id="audios">
+		    <source src="music/hh_01.mp3">
+		</audio>
+		<script>
+		document.addEventListener('click', function() {
+		    document.getElementById('audios').play()
+		})
+		 
+		</script>
+	 <div>
+		 <nav>
+			 <li class="title1" style="list-style: none;">
+				 <div id="title"><a class= "float1" href="">！你说的队</a>
+				<ul class="group">
+					<li>廖手校</li>
+					<li>梁雪枫</li>
+					<li>陈薇</li>
+					<li>陈德维</li>
+				</ul>
+				</div>
+			</li>
+				<ul class="li">
+					<li><a href="" onclick="javascript:window.location.href='index.html'">刷新</a></li>
+					<li><button id="login" class="transparent">登录</button></li>
+					<li><button id="register" class="transparent" onclick="javascript:window.location.href='register.html'">注册</button></li>
+					<!-- <li style="margin-right:-20px;"><a href="">注册</a></li> -->
+		      </ul>
+		</nav>
+<h1>Welcome To My Page</h1>
+		
+	</div>
+	
+	<div id="loginBox" class="box1">
+			<button id="closelogin" class="guanbi">X</button>
+		<div class="login-box">
+			<div class="catlogo"></div>
+			<div class="input-box">
+					<input type="text" placeholder="账号">
+					<input type="password" placeholder="密码"id="password">
+					<div class="checkbox">
+						<input type="checkbox" name="flag"><p>记住用户名</p>
+					</div>
+					<button onclick="load()">登录</button>
+			</div>
+		</div>
+	</div>
+	
+	<div id="registerBox" class="box1">
+			<button id="closeregister" class="guanbi">X</button>
+			<a class="light" href="#">注册</a>
+	</div>
+	
+	<!-- 立体旋转 -->
+	<div id="revolve" class="cube">
+		<div class="top"></div>
+		<div>
+			<span style="--i:0"></span>
+			<span style="--i:1"></span>
+			<span style="--i:2"></span>
+			<span style="--i:3"></span>
+		</div>
+	</div>	
+	</body>
+<!-- 	<script>
+		// 注册
+		var register=document.getElementById("register");
+		var registerBox=document.getElementById("registerBox");
+		var closeregister=document.getElementById("closeregister");
+		var revolve=document.getElementById("revolve");
+		// 为register ID添加onclick事件，获取display的值为block
+		register.onclick=function(){
+			registerBox.style.display="block";
+			loginBox.style.display="none";
+			revolve.style.display="none"
+			
+		}
+		// 为closelogin ID添加onclick事件，获取register的值为none
+		closeregister.onclick=function(){
+			registerBox.style.display="none";
+			revolve.style.display="block"
+		}	
+	</script> -->
+			
+	<script>
+		// 登录
+		var login=document.getElementById("login");
+		var loginBox=document.getElementById("loginBox");
+		var closelogin=document.getElementById("closelogin");
+		login.onclick=function(){
+			loginBox.style.display="block";
+			registerBox.style.display="none";
+			revolve.style.display="none"
+		}
+		closelogin.onclick=function(){
+			loginBox.style.display="none";
+			revolve.style.display="block"
+		}	
+		
+	</script>
+	
+	<script>
+		function load(){
+			alert("页面正在制作中···")
+		}
+	</script>
+
+	
+</html>
