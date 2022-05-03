@@ -1,0 +1,205 @@
+		/* 登录块 */
+	.box1{
+		top: -15%;
+		position: relative;
+		margin: auto;
+		width:600px;
+		height:500px;
+		background:linear-gradient(200deg,#00e269,#1e6cac,#e30007);
+		opacity: 0.9;
+		/* display:flex; */
+		 background-size: 400%;
+		animation: bg 10s infinite; 
+	}
+	@keyframes bg{
+		0%{
+			background-position:0% 50%;
+		}
+		30%{
+			background-position:100% 50%;
+		}
+		60%{
+			background-position:100% 50%;
+		}
+		100%{
+			background-position:0% 50%;
+		}
+	}
+		
+		.guanbi{
+			/* 关闭页面按钮X的属性 */
+			background: #009deb;
+			background-size: 500%;
+			border-radius: 50%;
+			font-size: 15px;
+			height: 25px;
+			position: absolute;
+			right: -10px;
+			top: -10px;
+			width: 25px;
+			line-height: 10px;
+			/* 垂直位置 */
+			font-weight: bold;
+			/* 字体加粗 */
+			padding-left: 0.6%;
+			color: #000000;
+			opacity: 0.8;
+		}
+		#loginBox{
+			display:none;
+		}
+		.transparent{
+			/* 登录,注册button属性 */
+			background-color: transparent;
+			border-color: transparent;
+			text-decoration: none;
+			color: #f0ffff;
+			/* 文字颜色,注释还原 */
+			display:block;
+			width:88px;
+			/* 背景颜色宽度 */
+			font-weight:bold;
+			margin-top: 3px;
+			font-size: 15px;
+		}
+		.box2{}
+		.box3{}
+		
+		
+		.light{
+			/* 按钮线性渐变属性 */
+			position: absolute;
+			top: 90%;
+			left: 50%;
+			/* 按钮位置 */
+			transform: translate(-50%,-50%);
+			/* translate位移，%———相对于自身高宽的百分比 */
+			width: 100px;
+			height: 30px;
+			text-align: center;
+			color: #383838;
+			/* 文字颜色 */
+			font-size: 20px;
+			/* a块的宽高 ,块内文字居中*/
+			text-decoration: none;
+			/* 取消下划线 */
+			background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+			/* #03a9f4,#f441a5,#ffeb3b,#03a9f4 */
+			/* linear-gradient线性渐变，90度 */
+			border-radius: 30px;
+			/* 边角半径属性 */
+			background-size: 400%;
+			/* text-transform: uppercase;
+			/* 所有字母大写 */ */
+		}
+		.light:hover{
+			animation: animate 8s linear infinite;
+			/* linear线性变化  infinite动画重复*/			
+		}
+		@keyframes animate{
+			0%{
+				background-position: 0%;
+			}
+			100%{
+				background-position: 400%;
+			}
+		}
+		.light::before{
+			content: "";
+			position: absolute;
+			top: -5px;
+			left: -5px;
+			right: -5px;
+			bottom: -5px;
+			z-index: -1;
+			background: linear-gradient(90deg,#03a9f4,#f441a5,#ffeb3b,#03a9f4);
+			border-radius: 40px;
+			background-size: 400%;
+			opacity: -1;
+			transition: 0.5s;
+		}
+		.light:hover::before{
+			filter: blur(20px);
+			opacity: 0.7;
+			}
+		
+		/* 注册框 */
+		#registerBox{
+			display:none;
+		}
+		
+		
+		
+/* 登录块展开 */
+		.login-box{
+			position: relative;
+			width: 320px;
+			top: 45%;
+			left: 140px;
+		}
+		.input-box{
+			display: flex;
+			flex-direction: column;
+		}
+		.input-box input{
+					height: 40px;
+					border-radius: 4px;
+					text-indent: 15px;
+					/* 文字缩进 */
+					outline: none;
+					border: none;
+					/* 无轮廓 边框 */
+					margin-bottom: 15px;
+				}
+				.input-box input:focus{
+					/* 鼠标进入input框出现样式 */
+					outline: 2px solid lightseagreen;
+				}
+				.input-box button{
+					border: none;
+					height: 45px;
+					background-color:lightseagreen;
+					color: white;
+					font-weight: bold;
+					/* 文字颜色 ,加粗*/
+					border-radius: 3px;
+					cursor: pointer;
+					/* 鼠标经过样式 */
+				}
+				.checkbox{
+					width: 320px;
+					height: 20px;
+					border-radius: 4px;
+					text-indent: 50px;
+				}
+				.checkbox input{
+					position: absolute;
+					width: 20px;
+					height:20px;
+					left: 90px;
+					bottom:38px;
+					z-index: 1;
+					/* 调整位于上层 */
+					opacity: 0.8;
+				}
+				.checkbox p{
+					position: absolute;
+					width: 160px;
+					height: 40px;
+					left: 90px;
+					bottom: 19.5px;
+					font-weight: bolder 300;
+					letter-spacing: 2px;
+					
+				}
+				
+				/* 猫猫logo样式 */
+				.catlogo{
+					 width:211px;
+					height: 108px; 
+					background:url(../images/catlogo1.png);
+					/*不重复平铺 */
+					position: absolute;
+					top:-84px;
+					left:50px;
+				}

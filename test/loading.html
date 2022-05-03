@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+				/* padding和border的值就不会在影响元素的宽高，
+				相当于把padding和border的值都算在content里
+				盒子模型会自动根据padding和border的值来
+				调整content的值，就不需要手动调整 */
+			}
+			body{
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				height: 100vh;
+				/* background-image: url("../images/sky3.jpg"); */
+				background: #000;
+				background-size: cover;	
+			}
+			.load{
+				position: relative;
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				background: linear-gradient(45deg,transparent,transparent 40%,#e5f403);
+				animation: circle 2s linear infinite;
+			}
+			@keyframes circle{
+				0%{
+					transform: rotate(0deg);
+					filter: hue-rotate(0deg);
+					/* 在图像上应用旋转色调 */
+				}
+				100%{
+					transform: rotate(360deg);
+					filter: hue-rotate(360deg);
+				}
+				}
+				.load::before{
+					content: "";
+					position: absolute;
+					top: 6px;
+					left: 6px;
+					right: 6px;
+					bottom: 6px;
+					background: #000;
+					border-radius: 50%;
+					z-index: 99;
+				}
+/* 				.load::after{
+					content: "";
+					top: 0px;
+					left: 0px;
+					right: 0px;
+					bottom: 0px;
+					background: #000;
+					background: linear-gradient(45deg,transparent,transparent 40%,#ffff00);
+					border-radius: 50%;
+					opacity: 1;
+					filter: blur(20px);	
+				} */
+			}
+</style>
+	</head>
+	<body >
+		<div class="load">
+		</div>
+	</body>
+</html>

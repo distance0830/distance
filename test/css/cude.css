@@ -1,0 +1,80 @@
+
+			.cube{
+					z-index: -1;
+					position: relative;
+					margin: auto;
+					width: 100px;
+					height: 100px;
+					transform-style: preserve-3d;
+					/* 在三维空间中的渲染方式:不执行平铺,即子元素保留其位置 */
+					transform: rotateX(-30deg);
+					animation: cude 4s linear infinite;
+					/* infinite动画重复 */
+					top: 45%;
+					display: block;
+				}
+				@keyframes cude{
+					0%{
+						transform: rotateX(-30deg) rotateY(0deg);
+					}
+					100%{
+						transform: rotateX(-30deg) rotateY(360deg);
+					}
+				}
+				.cube div{
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 100%;
+					width: 100%;
+					transform-style: preserve-3d;
+				}
+				.cube div>span{
+					opacity: 1;
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+					background:linear-gradient(#285cbd,#153984,#112947,#153984,#2e65cc);
+					/* 上至下 */
+					transform:rotateY(calc(90deg*var(--i)))translateZ(50px);
+					/* 每一个span块偏移Z轴距离 */
+				}
+				.top{
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100px;
+					height: 100px;
+					background: #2d68cc;
+					/* 顶块颜色 */
+					transform: rotateX(90deg) translateZ(50px);
+					/* 围绕X轴旋转90度,偏移Z轴(中心)75px */
+				}
+				.top:before{
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100px;
+					height: 100px;
+					background: #2867d4;
+					transform: translateZ(-130px);
+					/* 底块颜色 偏移位置 */
+					filter: blur(15px);
+					/* 模糊20像素 */
+					box-shadow: 0 0 60px rgba(0, 225, 0, 0.2),
+					0 0 100px #2962ca,
+	1				0 0 150px #2962ca,
+					0 0 200px #2962ca,
+					0 0 250px #2962ca;
+				/* 	将一个或多个投影附加到长方体。
+					该属性包含以逗号分隔的阴影列表，
+					每个阴影由2-4个长度值、可选颜色和可选插入关键字指定。
+					省略的长度为0：省略的颜色是用户代理选择的颜色 */
+
+					
+					
+				}
+			}
