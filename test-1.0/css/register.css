@@ -98,6 +98,7 @@ input.name {
 	font-size: 17px;
 	letter-spacing: 1px;
 	margin-bottom: 18px;
+	z-index: 5;
 }
 
 input.password {
@@ -111,6 +112,7 @@ input.password {
 	font-size: 17px;
 	letter-spacing: 1px;
 	margin-bottom: 20px;
+	z-index: 5;
 }
 input.email {
 	position: relative;
@@ -123,6 +125,7 @@ input.email {
 	font-size: 17px;
 	letter-spacing: 1px;
 	margin-bottom: 20px;
+	z-index: 5;
 }
 input.location {
 	position: relative;
@@ -135,6 +138,7 @@ input.location {
 	font-size: 17px;
 	letter-spacing: 1px;
 	margin-bottom:10px;
+	z-index: 5;
 }
 
 .return-logo{
@@ -197,7 +201,7 @@ input.location {
 	/* 第三个ring标签 */
 	position: absolute;
 	top: -300px;
-	animation: huan3 2s linear infinite;
+	animation: huan3 3s linear infinite;
 	animation-delay: -21s;
 	
 }
@@ -234,7 +238,7 @@ input.location {
 /* 第二个ring线条颜色(右) */
 .container .ring:nth-child(2){
 	border-top: 5px solid #aa00ff;
-	animation: huan2 2.5s linear infinite;
+	animation: huan2 4s linear infinite;
 }
 @keyframes huan2{
 	0%{
@@ -268,7 +272,7 @@ input.location {
 /* 第一个ring线条颜色(左) */
 .container .ring:nth-child(1){
 	border-top: 5px solid #ff007f;
-	animation: huan1 2.5s linear infinite;
+	animation: huan1 4s linear infinite;
 }
 
 @keyframes huan1{
