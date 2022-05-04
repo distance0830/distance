@@ -1,0 +1,300 @@
+.registerbody{
+background: url("../images/sky2.jpg");
+/* background-position: center center; */
+background-size: cover;
+min-height: 100vh;
+/* 自适应屏幕 */
+display: flex;
+justify-content: center;
+align-items: center;
+/* 水平垂直居中 */
+}
+
+
+.registerpage{
+	width: 320px;
+	height: 400px;
+}
+.register-bg{
+	position: relative;
+	top:-430px ;
+	height: 400px;
+	background: linear-gradient(200deg,#aa00ff, #00aaff,#ff007f);
+	opacity: 0.5;
+	z-index: -1;
+	border-radius: 5px;
+	background-size: 400%;
+	animation: registerbg 7s infinite;
+}
+@keyframes registerbg{
+	0%{
+		background-position:0% 50%;
+	}
+	50%{
+		background-position:100% 50%;
+	}
+	100%{
+		background-position:0% 50%;
+	}
+}
+.register-input form{
+	height: 400px;
+}
+.register-input input{
+
+	left: 22.5px;
+	
+}
+.register-input input:focus{
+	outline: 3px solid #00aaff;
+	/* 鼠标focus边轮廓颜色 */
+}
+
+input.submit{
+	position: relative;
+	width: 275px;
+	background-color: #014751;
+	color: #fff;
+	padding: 9px;
+	/* 文字垂直距离 */
+	outline: none;
+	border: none;
+	font-size:17px;
+	margin-top: 8px;
+	/* 垂直距离 */
+	cursor: pointer;
+	height: 42px;
+	border-radius: 40px;
+	background: #0084c6;
+	/* background: linear-gradient(90deg,#03a9f4,#c20061,#d8c532,#03a9f4); */
+	/* 注册框颜色 */
+	background-size: 400%;
+	opacity: 0.9;
+	z-index: 2;
+}
+input.submit:hover{
+	background: #00aa7f;
+	/* animation: text 8s linear infinite; */
+}
+/* hover注册的动画text */
+/* @keyframes text{
+	0%{
+		background-position: 0%;
+	}
+	100%{
+		background-position: 400%;
+	}
+} */
+
+
+input.name {
+	position: relative;
+	width: 220px;
+	padding: 12px 10px 12px 45px;
+	border: none;
+	outline: none;
+	border-radius: 10px;
+	background: rgb(255, 255, 255) url("../images/user.png") no-repeat 10px 10px;
+	font-size: 17px;
+	letter-spacing: 1px;
+	margin-bottom: 18px;
+}
+
+input.password {
+	position: relative;
+	width: 220px;
+	padding: 12px 10px 12px 45px;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	background: rgb(255, 255, 255) url("../images/password.png") no-repeat 10px 10px;
+	font-size: 17px;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+input.email {
+	position: relative;
+	width: 220px;
+	padding: 12px 10px 12px 45px;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	background: rgb(255, 255, 255) url("../images/mail.png") no-repeat 10px 10px;
+	font-size: 17px;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+input.location {
+	position: relative;
+	width: 220px;
+	padding: 12px 10px 12px 45px;
+	border: none;
+	outline: none;
+	border-radius: 6px;
+	background: rgb(255, 255, 255) url("../images/location.png") no-repeat 10px 10px;
+	font-size: 17px;
+	letter-spacing: 1px;
+	margin-bottom:10px;
+}
+
+.return-logo{
+	position: relative;
+	width: 45px;
+	height: 45px;
+	background:url(../images/return1.png);
+	background-size: cover;
+	z-index:2;
+	opacity: 0.8;
+	top: 1%;
+	left: -3%;
+	
+}
+
+/* .starbg{
+	position: absolute;
+	width: 8000px;
+	height: 800px;
+	background: url(../images/ligter1.png);
+	top:10px;
+	opacity: 0.3;
+	
+} */
+
+
+
+/* 流动环形背景 */
+
+.container{
+	position: absolute;
+	width: 100%;
+	display: flex;
+	top: 50%;
+	
+	/* 弹性盒子,能收缩扩展flex容器内元素.最大限度填充可用空间 */
+	justify-content: center;
+	align-items: center;
+}
+
+/* div块（圆圈）大小 */
+.container .ring{
+	position: relative;
+	width: 400px;
+	height: 400px;
+	border-radius: 50%;
+	margin: -30px;
+	border: 4px solid transparent;
+	border-top: 4px solid #00ffff;
+	opacity: 0.5;
+	z-index: -5;
+}
+
+
+
+
+
+/* 第三个ring线条颜色，旋转方向(上) */
+.container .ring:nth-child(3){
+	/* 第三个ring标签 */
+	position: absolute;
+	top: -300px;
+	animation: huan3 2s linear infinite;
+	animation-delay: -21s;
+	
+}
+
+@keyframes huan3{
+	0%{
+		transform: rotate(360deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+	
+}
+
+/* 第三个ring(上)圆点 */
+.container .ring:nth-child(3):before{
+	content: "";
+	position: absolute;
+	top: 45px;
+	left: 40px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #00ffff;
+	box-shadow: 0 0 0 4px #009393,
+	0 0 16px #009373,
+	0 0 32px #009353,
+	0 0 32px #00aaff,
+	0 0 70px #00ffff;
+	/* 无水平 竖直偏移,无模糊半径,10px扩展半径,默认外投影 */
+}
+
+
+/* 第二个ring线条颜色(右) */
+.container .ring:nth-child(2){
+	border-top: 5px solid #aa00ff;
+	animation: huan2 2.5s linear infinite;
+}
+@keyframes huan2{
+	0%{
+		transform: rotate(360deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+	
+}
+
+
+.container .ring:nth-child(2):before{
+	content: "";
+	position: absolute;
+	top: 45px;
+	left: 40px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #aa00ff;
+	box-shadow: 0 0 0 4px #660099,
+	0 0 16px #660069,
+	0 0 32px #660039,
+	0 0 32px #aa00ff,
+	0 0 70px #aa00ff;
+	/* 无水平 竖直偏移,无模糊半径,10px扩展半径,默认外投影 */
+}
+
+
+/* 第一个ring线条颜色(左) */
+.container .ring:nth-child(1){
+	border-top: 5px solid #ff007f;
+	animation: huan1 2.5s linear infinite;
+}
+
+@keyframes huan1{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+	
+}
+
+
+.container .ring:nth-child(1):before{
+	content: "";
+	position: absolute;
+	top: 45px;
+	right: 40px;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	background: #ff007f;
+	box-shadow: 0 0 0 4px #a60053,
+	0 0 16px #a60023,
+	0 0 32px #a60023,
+	0 0 32px #ff007f,
+	0 0 70px #ff007f;
+	/* 无水平 竖直偏移,无模糊半径,10px扩展半径,默认外投影 */
+}
